@@ -12,15 +12,16 @@
           <h1 class="display-5 fw-bold text-white pb-2">Craig</h1>
           <div class="col-lg-6 mx-auto">
             <p class="fs-5 mb-4">Upload your resume. We'll take care of the rest.</p>
-            <div class="p-4 p-md-5 border rounded-3 border-secondary">
-              <div class="mb-3">
-                <!--<label class="form-label" for="customFile">Upload</label>-->
-                <input type="file" class="form-control bg-dark text-secondary border-secondary" id="uploadResumeInput">
+            <form action="/upload" method="POST" enctype="multipart/form-data"> <!-- Add form tag -->
+              <div class="p-4 p-md-5 border rounded-3 border-secondary">
+                <div class="mb-3">
+                  <input type="file" class="form-control bg-dark text-secondary border-secondary" id="uploadResumeInput" name="resume" accept=".pdf" required> <!-- Add name attribute and accept filter -->
+                </div>
               </div>
-            </div>
-            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center pt-4">
-              <button type="button" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold">Upload</button>
-            </div>
+              <div class="d-grid gap-2 d-sm-flex justify-content-sm-center pt-4">
+                <button type="submit" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold">Upload</button> <!-- Change type to submit -->
+              </div>
+            </form>
           </div>
         </div>
       </div>
@@ -32,5 +33,3 @@
       </div>
 </body>
 </html>
-
-
